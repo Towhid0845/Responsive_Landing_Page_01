@@ -1,0 +1,401 @@
+/* 
+Template Name: complete project
+version: 1.0
+Author Name: Towhiduzzaman
+
+Table of content
+----------------
+0. Comman css part
+1. Menu part
+2. Banner part
+3. About part
+4. Work part
+5. Service part
+*/
+
+/* comman css start */
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+body {
+	/* font-family: "Lato", sans-serif; */
+	font-family: "Raleway", sans-serif;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul,
+ol {
+	list-style: none;
+}
+img {
+	vertical-align: middle;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-size: 50px;
+	font-weight: 500;
+	color: #fff;
+}
+h2 {
+	font-size: 30px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+h3 {
+	font-size: 25px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+h4 {
+	font-size: 24px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+p {
+	font-size: 14px;
+	line-height: 24px;
+}
+.button {
+	border: 1px solid;
+	padding: 10px 30px;
+	margin: 0 10px;
+	text-transform: uppercase;
+}
+.button:hover {
+	color: #fff;
+	background-color: #0f860b;
+}
+.button,
+.section_heading h2,
+.banner_dots li button,
+.banner_left,
+.banner_right,
+.custom_nav,
+.logo {
+	border-color: #32c52d !important;
+}
+.service_item i,
+.button,
+#perfectnav ul li a:hover {
+	color: #32c52d;
+}
+.section_heading h2::after,
+.banner_dots li butt::after {
+	background-color: #32c52d;
+}
+.service_item:hover i,
+.service_item:hover p,
+.service_item:hover h3,
+.overly_content h4,
+.overly_content p,
+.button,
+.banner_right,
+.banner_left,
+#perfectnav ul li a {
+	transition: 0.4s;
+	-webkit-transition: 0.4s;
+	-moz-transition: 0.4s;
+	/* -mz-transition: 0.4s; */
+}
+
+.section_heading h2 {
+	border-bottom: 4px solid;
+	display: inline-block;
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+	position: relative;
+}
+.section_heading h2::after {
+	position: absolute;
+	content: "";
+	bottom: -17px;
+	left: 50%;
+	transform: translateX(-50%) rotate(45deg);
+	-webkit-transform: translateX(-50%) rotate(45deg);
+	height: 30px;
+	width: 30px;
+}
+#team,
+#about,
+#work,
+#service {
+	padding: 40px 0;
+}
+/* comman css end */
+
+/* menu css start */
+.custom_nav {
+	/* position: absolute; */
+	/* background: transparent; */
+	position: fixed;
+	background: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	top: 0;
+	left: 0;
+	border-bottom: 1px solid;
+	z-index: 999;
+}
+#perfectnav ul li a {
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 15px 25px;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+	background: transparent;
+	color: #32c52d !important;
+}
+
+/* menu css end */
+
+/* banner css start */
+#banner {
+	clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+}
+.banner_item {
+	background-size: cover !important;
+	background-position: center !important;
+	height: 100vh;
+	position: relative;
+	z-index: 1;
+}
+.banner_item::after {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: -1;
+}
+.banner_content {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.banner_content p {
+	max-width: 600px;
+	margin: auto;
+	padding: 20px 0 50px;
+	color: #fff;
+}
+.banner_right,
+.banner_left {
+	position: absolute;
+	top: 50%;
+	border: 2px solid;
+	color: #fff;
+	padding: 4px 8px;
+	z-index: 99;
+	transform: scaleX(0);
+	cursor: pointer;
+}
+.banner_left {
+	left: 0;
+}
+.banner_right {
+	right: 0;
+}
+#banner:hover .banner_right,
+#banner:hover .banner_left {
+	transform: scaleX(1);
+}
+.banner_dots {
+	position: absolute;
+	text-align: center;
+	bottom: 30px;
+	width: 100%;
+}
+.banner_dots li {
+	display: inline-block;
+	padding: 0 5px;
+}
+.banner_dots li button {
+	position: relative;
+	height: 15px;
+	width: 15px;
+	background-color: transparent;
+	border: 1px solid;
+	overflow: hidden;
+	color: transparent;
+}
+.banner_dots li button::after {
+	position: absolute;
+	content: "";
+	height: 5px;
+	width: 5px;
+	top: 4px;
+	left: 4px;
+	opacity: 0;
+}
+.banner_dots .slick-active button::after {
+	opacity: 1;
+}
+/* banner css end */
+
+/* about css start */
+.section_heading p {
+	color: #000;
+}
+/* about css end */
+
+/* work css start */
+.work_item {
+	position: relative;
+}
+.work_item:hover .overly {
+	opacity: 1;
+}
+
+.overly {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(153, 236, 160, 0.7);
+	opacity: 0;
+}
+.overly_content {
+	position: relative;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+}
+.overly_content h4 {
+	transform: translateY(-50px);
+	-webkit-transform: translateY(-50px);
+}
+.overly_content p {
+	/* display: inline-block; */
+	transform: translateY(50px);
+	-webkit-transform: translateY(50px);
+}
+.work_item:hover .overly_content h4 {
+	transform: translateY(0px);
+	-webkit-transform: translateY(0px);
+}
+.work_item:hover .overly_content p {
+	transform: translateY(0px);
+	-webkit-transform: translateY(0px);
+}
+.button-group .button {
+	float: left;
+}
+.button-group .button.is-checked {
+	color: white;
+	text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
+	background-color: #28f;
+	border: none;
+}
+.grid:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+/* work css end */
+
+/* service css start */
+.service {
+	border-bottom: 1px solid #b9b8b8;
+	border-right: 1px solid #b9b8b8;
+	margin: 50px 0;
+}
+.service_item {
+	border-top: 1px solid #b9b8b8;
+	border-left: 1px solid #b9b8b8;
+	height: 200px;
+	padding-top: 40px;
+	position: relative;
+}
+.service_item i {
+	font-size: 35px;
+	padding: 5px;
+	margin-bottom: 15px;
+	border-bottom: 2px solid #b9b8b8;
+}
+.service_item p {
+	position: absolute;
+	width: 100%;
+	top: 90px;
+	padding: 0 20px;
+	opacity: 0;
+}
+.service_item:hover h3 {
+	opacity: 0;
+}
+.service_item:hover i {
+	background: #e0d8d8;
+	border: 1px solid;
+	border-radius: 50%;
+	transform: translateY(-20px);
+	-webkit-transform: translateY(-20px);
+}
+
+.service_item:hover p {
+	opacity: 1;
+}
+/* service css end */
+
+/* skill css start */
+#skill {
+	padding: 60px 0;
+}
+.skill_left_bg {
+	background: #fff;
+	box-shadow: 0 0 5px #ddd;
+	margin: -30px 0;
+}
+.skill_right_bg {
+	background: url(../images/skill_img.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.skill_left,
+.skill_right {
+	max-width: 560px;
+	padding: 40px 0;
+}
+.skill_left {
+	margin-left: auto;
+}
+/* skill css end */
+
+/* team css start */
+#team {
+	background-color: #f1f1f1;
+}
+.team_text {
+	padding: 20px;
+	border: 1px solid #000;
+}
+.team_member img {
+	box-sizing: border-box;
+	opacity: 0.5;
+}
+.team_member .slick-center img {
+	opacity: 1;
+}
+/* team css end */
